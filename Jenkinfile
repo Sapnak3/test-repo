@@ -1,0 +1,20 @@
+pipeline {
+	agent any
+		stages {
+		stage('Build') {
+			steps {
+            catchError {
+			   withCredentials([usernamePassword(credentialsId: 'SUT', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+			   script{
+			   bat  '''
+			   "C:\\Program Files\\Eggplant\\runscript.bat"^
+			   "F:\\ejm_TestSuit\\ejm_Suit.suite\\Scripts\\Login_UserType.script" -param "https://uat.e-jm.com" -param "chrome"^
+			   "F:\\ejm_TestSuit\\ejm_Suit.suite\\Scripts\\FooterLink_Validation_PreLogin.script" -param "https://uat.e-jm.com" -param "chrome"^
+			   -host 3.81.234.4 -port 3389 -username "Administrator" -password "WCK=p(5yz0F.0eMm*rVwfIfwiMGmcO22" -type RDP -CommandLineOutput YES -GlobalResultsFolder "%WORKSPACE%\\%BUILD_NUMBER%\\ejmResults"
+				'''
+					}
+				}
+			}
+		}
+  }
+    
