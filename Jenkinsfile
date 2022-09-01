@@ -9,19 +9,19 @@ pipeline {
 				bat "mvn clean -f Eggplant_Automation"
                              }
                }
-		Stage('install') {
-			           Steps{
+		stage('install') {
+			           steps{
 			              bat "mvn install -f Eggplant_Automation"
 				        }   
 		}
-		Stage('test') {
-			           Steps{
+		stage('test') {
+			           steps{
 			              bat "mvn test -f Eggplant_Automation"
 				        }   
 		}
 		
-		Stage('package') {
-			           Steps{
+		stage('package') {
+			           steps{
 			              bat "mvn package -f Eggplant_Automation"
 				        }   
 		}
