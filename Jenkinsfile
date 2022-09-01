@@ -3,9 +3,9 @@ pipeline {
     options { skipDefaultCheckout() }
 	stages{
 	stage('SCM Checkout') {
-			agent { label 'main' }
+			agent { label ' ' }
 			steps{
-            bbs_checkout branches: [[name: '*/main]],
+            bbs_checkout branches: [[name: 'main'],
             credentialsId: 'github',
             id: 'sapnak3',
             mirrorName: '', projectName: 'Eggplant_Automation',
