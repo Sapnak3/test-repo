@@ -12,7 +12,7 @@ pipeline {
                // checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], 
                          // userRemoteConfigs: [[credentialsId: 'd5167762-58a0-471e-a70e-4898448e767f', 
                                               // url: 'https://github.com/Sapnak3/test-repo.git']]])
-            }
+           // }
         }
         stage('Test') {
             steps {
