@@ -16,7 +16,9 @@ pipeline {
                 
                 echo 'Testing..'
                 
-                bat '"C:\\Program Files\\Eggplant\\runscript.bat" "D:\\26May\\26May\\CCSS_Edmonton.suite\\Scripts\\TestCases\\Demo\\TOUC_3301.script" -CommandLineOutput Yes -AlertOnError yes'
+                bat '"C:\\Program Files\\Eggplant\\runscript.bat" 
+               "$WORKSPACE\\workspace\\FunctionalTesting\\CCSS_Edmonton.suite\\Scripts\\TestCases\\Demo\\TOUC_3301.script" -CommandLineOutput Yes -AlertOnError yes'
+                
                 }  
                 
             }
