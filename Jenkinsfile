@@ -19,7 +19,7 @@ pipeline {
             }
         }
         
-        Stage ('cleanup') {
+        stage ('cleanup') {
             /* clean up our workspace */
             deleteDir()
             /* clean up tmp directory */
