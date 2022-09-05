@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                "C:\Program Files\Eggplant\runscript.bat"  "D:\26May\26May\CCSS_Edmonton.suite\Scripts\TestCases\Demo\TOUC_3301.script"
+                bat '"C:\\Program Files\\Eggplant\\runscript.bat" "D:\\26May\\26May\\CCSS_Edmonton.suite\\Scripts\\TestCases\\Demo\\TOUC_3301.script" -CommandLineOutput Yes -AlertOnError yes'
                 
                 
             }
