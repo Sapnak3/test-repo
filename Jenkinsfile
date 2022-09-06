@@ -5,9 +5,8 @@ pipeline {
         stage('Build') {
             steps {
             echo 'Building..'
-            git branch: 'main', credentialsId: '173ebba3-ef36-4ebb-af69-b99362617a3b', url: 'https://github.com/Sapnak3/test-repo.git'   
-            //build job: 'Functional Testing', parameters: [string(name: 'ENVIRONMENT_URL', value: 'http://qa-launch2020-ccss-ecms.connected.proterra.com.s3-website-us-east-1.amazonaws.com/#/login'), string(name: 'SELECT_BROWSER', value: 'Chrome')]
-                   }
+            git branch: 'main', credentialsId: 'c851c236-8982-459b-830b-88e7be6e28bd', url: 'https://github.com/Sapnak3/test-repo.git'   
+                               }
         }
             
         stage('Test') {
