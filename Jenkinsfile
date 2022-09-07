@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
             echo 'Building..'
-            git branch: 'main', credentialsId: '3de8d39f-d506-4645-aabf-2a650ec732a4', url: 'https://github.com/Sapnak3/test-repo.git'   
+            git branch: 'main', credentialsId: 'a8b0b31a-f7bc-4450-ac60-63b530ff0311', url: 'https://github.com/Sapnak3/test-repo.git'   
                                }
         }
             
