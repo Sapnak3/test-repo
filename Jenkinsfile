@@ -24,8 +24,10 @@ pipeline {
         
         stage ('cleanup') {
             steps{
+                catchError {
            cleanWs()
             }
+           }
     }
         }
     }
