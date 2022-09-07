@@ -7,7 +7,8 @@
 
 BeginTestCase TOUC_3301
 
-connect "ec2-3-81-234-4.compute-1.amazonaws.com"
+--connect "ec2-3-81-234-4.compute-1.amazonaws.com"
+Connect { serverID: "ec2-3-81-234-4.compute-1.amazonaws.com", portNum: 3389, password: "WCK=p(5yz0F.0eMm*rVwfIfwiMGmcO22", username: "Administrator", Type:"RDP", Width: 1920, Height: 1080}
 
 Log "###########   Started execution of Test Case--> TOUC_3301   ##############"
 Log "#######################################################"
