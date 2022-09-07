@@ -15,19 +15,19 @@ pipeline {
                 
                 echo 'Testing..'
                 
-                bat '"C:\\Program Files\\Eggplant\\runscript.bat" "$WORKSPACE\\workspace\\FunctionalTesting\\CCSS_Edmonton.suite\\Scripts\\TestCases\\Demo\\TOUC_3301.script" -CommandLineOutput Yes -AlertOnError yes -LicenserHost ec2-54-210-217-115.compute-1.amazonaws.com'
+                bat '"C:\\Program Files\\Eggplant\\runscript.bat" "$WORKSPACE\\FunctionalTesting\\CCSS_Edmonton.suite\\Scripts\\TestCases\\Demo\\TOUC_3301.script" -CommandLineOutput Yes -AlertOnError yes -LicenserHost ec2-54-210-217-115.compute-1.amazonaws.com'
                     
                 }  
                 
             }
         }
         
-        //stage ('cleanup') {
-          //  steps{
-              //  catchError {
-           //cleanWs()
-            //}
-          // }
-    //}
+        stage ('cleanup') {
+           steps{
+               catchError {
+           cleanWs()
+            }
+           }
+    }
         }
     }
