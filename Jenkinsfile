@@ -22,12 +22,12 @@ pipeline {
             }
         }
         
-        stage ('cleanup') {
-            steps{
-                catchError {
-           cleanWs()
-            }
-           }
-    }
+        //stage ('cleanup') {
+          //  steps{
+              //  catchError {
+           //cleanWs()
+            //}
+          // }
+    //}
         }
     }
