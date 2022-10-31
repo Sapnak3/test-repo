@@ -14,7 +14,7 @@ Log "###########   Started execution of Test Case--> TOUC_3301   ##############"
 Log "#######################################################"
 --testdata
 "CCSS_Pages/BasePage".OpenApplication
---"CCSS_Pages/BasePage".Login
+"CCSS_Pages/BasePage".Login
 
 --"CCSS_Pages/CCSSConfiguration".IsBusDisplayedAndVerifyIncomingQueue 
 
